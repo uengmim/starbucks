@@ -11,6 +11,10 @@ img{
     display: block; /* 레이아웃으로 취급 */
 }
 
+a{
+    text-decoration: none;
+}
+
 /* Header */
 header {
     background-color: royalblue;
@@ -31,4 +35,55 @@ header .logo {
     bottom: 0;
     left: 0;
     margin: auto;
+    display: none;
+}
+header .sub-menu {
+
+}
+
+header .sub-menu ul.menu {
+    font-family: Arial, sans-serif;
+    display: flex; /* 수평 정렬 */
+}
+
+header .sub-menu ul.menu li {
+    position: relative;
+    
+}
+
+header .sub-menu ul.menu li::before{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 12px;
+    background-color: #e5e5e5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+header .sub-menu ul.menu li:first-child:before{
+    display: none;
+}
+header .sub-menu ul.menu li a {
+    font-size: 12px;
+    padding: 11px 16px;
+    display: block;
+    color: #656565;
+}
+header .sub-menu ul.menu li a:hover { 
+    color: #000000; /* 마우스 오버 색상 변경 */
+
+}
+header .sub-menu .search {
+    
+}
+
+header .sub-menu .search input {
+    
+}
+
+header .sub-menu .search .material-icons {
+    
 }
