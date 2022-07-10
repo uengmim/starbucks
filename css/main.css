@@ -20,7 +20,25 @@ a{
   position: relative;
 }
 
+.btn {
+  width: 130px;
+  padding: 10px;
+  border: 2px solid #333333;
+  border-radius: 4px;
+  color: #333;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  box-sizing: border-box; /*padding이 들어가도 요소가 커지지 않음 */
+  display: block;
+  transition: .4s;
+}
 
+.btn:hover {
+  background-color: #333;
+  color: #fff;
+}
 /*HEADER*/
 header {
   width: 100%;
@@ -28,6 +46,7 @@ header {
   background-color: #F6F5F0;
   border-bottom: 1px solid #c8c8c8;
   top: 0;
+  z-index: 9;
 }
 
 header > .inner { /*HEADER의 자식요소인 inner만 설정 */
@@ -205,4 +224,55 @@ header .badges .badge {
   margin-bottom: 12px;
   box-shadow: 4px 4px 10px rgba(0,0,0,.15); /*뱃지 그림자*/
   cursor: pointer;
+}
+
+
+/* VISUAL */
+.visual {
+  margin-top: 120px;
+  background-image: url("../images/visual_bg.jpg");
+  background-position: center;
+}
+.visual .inner{
+  height: 646px;
+}
+.visual .title{
+  position: absolute;
+  top: 88px;
+  left: -10px;
+}
+
+.visual .title .btn{
+
+}
+
+.visual .cup1.image{
+  position: absolute;
+  bottom: 0;
+  right: -47px;
+  
+}
+
+.visual .cup1.text{
+  position: absolute;
+  top: 38px;
+  right: 171px;
+}
+
+.visual .cup2.image{
+  position: absolute;
+  bottom: 0;
+  right: 163px;
+}
+
+.visual .cup2.text{
+  position: absolute;
+  top: 321px;
+  right: 416px;
+}
+
+.visual .spoon{
+  position: absolute;
+  bottom: 0;
+  left: 275px;
 }
