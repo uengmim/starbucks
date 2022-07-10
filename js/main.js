@@ -27,12 +27,14 @@ window.addEventListener('scroll', _.throttle( function () {
     //배지 숨기기
     //gsap.to(요소, 지속시간, 옵션);
     gsap.to(badgeEl, .6, {
-      opacity: 0
-    });
+      opacity: 0, //시각적으로 안 보이게
+      display: 'none' //실제로 사라지도록
+    }); 
   } else {
     //배지 보이기
     gsap.to(badgeEl, .6, {
-      opacity: 1
+      opacity: 1,
+      display: 'block'
     });
   }
  }, 300))
