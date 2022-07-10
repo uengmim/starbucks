@@ -39,6 +39,48 @@ a{
   background-color: #333;
   color: #fff;
 }
+
+.btn.btn--reverse {
+  background-color: #333;
+  color: #fff;
+}
+
+.btn.btn--reverse:hover {
+  background-color: transparent;
+  color: #333;
+}
+
+.btn.btn--brown {
+  color: #592B18;
+  border-color: #592B18;
+}
+
+.btn.btn--brown:hover {
+  color: #FFF;
+  border-color: #592B18;
+}
+
+.btn.btn--gold {
+  color: #D9AA8A;
+  border-color: #D9AA8A;
+}
+
+.btn.btn--gold:hover {
+  color: #FFF;
+  border-color: #D9AA8A;
+}
+
+.btn.btn--white {
+  color: #FFF;
+  border-color: #FFF;
+}
+
+.btn.btn--white:hover {
+  color: #333;
+  border-color: #FFF;
+}
+
+
 /*HEADER*/
 header {
   width: 100%;
@@ -243,7 +285,9 @@ header .badges .badge {
 }
 
 .visual .title .btn{
-
+  position: absolute;
+  top:259px;
+  left: 173px;
 }
 
 .visual .cup1.image{
@@ -275,4 +319,8 @@ header .badges .badge {
   position: absolute;
   bottom: 0;
   left: 275px;
+}
+
+.visual .fade-in {
+  opacity: 0;
 }
