@@ -21,7 +21,7 @@ const badgeEl = document.querySelector('header .badges')
 
 // 스크롤이 지나치게 자주 발생하는 것을 조절(throttle, 일부러 부하를 줌)
 // _.throttle(함수, 시간)
-window.addEventListener('scroll', _.throttle( function () {
+window.addEventListener('scroll', _.throttle(function () {
   console.log(window.scrollY);
   if (window.scrollY > 500) {
     //배지 숨기기
@@ -29,7 +29,7 @@ window.addEventListener('scroll', _.throttle( function () {
     gsap.to(badgeEl, .6, {
       opacity: 0, //시각적으로 안 보이게
       display: 'none' //실제로 사라지도록
-    }); 
+    });
   } else {
     //배지 보이기
     gsap.to(badgeEl, .6, {
@@ -37,15 +37,21 @@ window.addEventListener('scroll', _.throttle( function () {
       display: 'block'
     });
   }
- }, 300))
+}, 300))
 
- const fadeEls = document.querySelectorAll('.visual .fade-in');
- fadeEls.forEach(function (fadeEl, index) {
+const fadeEls = document.querySelectorAll('.visual .fade-in');
+fadeEls.forEach(function (fadeEl, index) {
   gsap.to(fadeEl, 1, {
     delay: (index + 1) * .7, //0.7, 1.4, 2.1, 2.8
     opacity: 1
   });
- });
+});
 
 
- //Notice Swiper
+//Notice Swiper
+//생성자(클래스)
+new Swiper('.notice-line .swiper-container', {
+  direction: 'vertical', // 수직 슬라이드
+  autoplay: true, // 자동 재생 여부
+  loop: true // 반복 재생 여부
+})
