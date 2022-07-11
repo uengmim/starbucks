@@ -28,10 +28,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> <!-- google Material Icon-->
     <link rel="stylesheet" href="./css/main.css">
+
     <!-- 함수가 동시에 실행되는 수를 자바스크립트 라이브러리로 관리   -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!-- 애니메이션 효과 라이브러리   -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    
+    <!-- 슬라이드 SWIPER   -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
     <script defer src="./js/main.js"></script>
 </head>
 
@@ -405,13 +412,14 @@
                 <div class="inner__left">
                     <h2>공지사항</h2> 
                     <div class="swiper-container"></div>
-                    <a href="javascript:void(0)" class="notic-line__more"></a>
-                        <div class="material-icons">add_circle</div>
+                    <a href="javascript:void(0)" class="notice-line__more">
+                        <span class="material-icons">add_circle</span>
+                    </a>
                 </div>
                 <div class="inner__right">
                     <h2>스타벅스 프로모션</h2>
                     <div class="toggle-promotion"></div>
-                    <div class="material-icons">upload</div>
+                        <span class="material-icons">upload</span>
 
                 </div>
             </div>
