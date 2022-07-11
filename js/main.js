@@ -46,3 +46,6 @@ window.addEventListener('scroll', _.throttle( function () {
     opacity: 1
   });
  });
+
+
+ //Notice Swiper
