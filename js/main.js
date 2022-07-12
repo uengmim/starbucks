@@ -73,3 +73,15 @@ new Swiper('.promotion .swiper-container',{
     nextEl: '.promotion .swiper-next'
   }
 });
+
+const promotionEl = document.querySelector('.promotion'); //프로모션의 클래스를 가진 요소를 찾아서 변수 promotionEl에 넣음
+const promotionToggleBtn = document.querySelector('.toggle-promotion'); //토글 프로모션의 클래스를 가진 요소를 찾아서 변수 promotionToggleBtn에 넣음
+let isHidePromotion = false; //isHidePromotion 이건 현재 false 상태
+promotionToggleBtn.addEventListener('click', function (){ //프로모션 토글 버튼 클릭 시 함수가 실행됨
+  isHidePromotion = !isHidePromotion //isHidePromotion 변수의 반댓값을 실행
+  if (isHidePromotion) { //숨김처리
+    promotionEl.classList.add('hide');
+  } else{ //보임처리
+    promotionEl.classList.remove('hide');
+  }
+});
