@@ -1,5 +1,5 @@
 # starbucks
-스타벅스 랜딩 페이지
+스타벅스 클론 코딩
 ## 오픈 그래프(The Open Graph protocol)
 
 웹페이지가 소셜 미디어(페이스북 등)로 공유될 때 우선적으로 활용되는 정보를 지정.
@@ -39,3 +39,34 @@
 - `twitter:description`: 페이지의 간단한 설명
 - `twitter:image`: 페이지의 대표 이미지 주소(URL)
 - `twitter:url`: 페이지 주소(URL)
+
+
+## Reset.css
+
+각 브라우저의 기본 스타일을 초기화.
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+```
+
+## Google Fonts
+
+페이지에서 사용할 '나눔고딕' 폰트를 지정.
+
+> 폰트 라이선스 확인
+
+[Google Fonts](https://fonts.google.com/)에서 고른 폰트 파일을 가져옴.
+
+```html
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet" />
+```
+
+페이지에 폰트를 적용.(CSS 상속)
+
+```css
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+```
+
