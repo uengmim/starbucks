@@ -85,3 +85,16 @@ promotionToggleBtn.addEventListener('click', function (){ //프로모션 토글 
     promotionEl.classList.remove('hide');
   }
 });
+
+function floatingobject(selector){
+  //gsap.to(요소, 시간, 옵션);
+  gsap.to(selector, 1, { 
+    y: 20,
+    repeat: -1, //무한반복
+    yoyo: true, // 다시 반복
+    ease: Power1.easeInOut,
+    delay: 1
+    });
+}
+
+floatingobject('.floating');
