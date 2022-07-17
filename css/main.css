@@ -484,6 +484,7 @@ header .badges .badge {
 }
 
 .notice .promotion .swiper-container {
+  /* 819px 슬라이드 3개와 그 사이 여백 10px씩 = 2477px */
   width: calc(819px * 3 + 20px);
   /*계산 함수*/
   height: 553px;
@@ -540,6 +541,8 @@ header .badges .badge {
 
 .notice .promotion .swiper-prev,
 .notice .promotion .swiper-next {
+  /* Swiper Container 높이의 절반만큼 끌어올림 */
+  /* 버튼 높이의 절반만큼 추가로 끌어올림 */
   width: 42px;
   height: 42px;
   border: 2px solid #333;
@@ -645,7 +648,7 @@ header .badges .badge {
 .youtube .youtube__area::before {
   content: "";
   display: block;
-  /* 16:9 영상 비율로 요소 크기 만들기! */
+  /* 16:9 영상 비율로 요소 크기 만들기 */
   width: 100%;
   height: 0;
   padding-top: 56.25%;
@@ -802,6 +805,8 @@ header .badges .badge {
 
 .reserve-store .medal .front, 
 .reserve-store .medal .back {
+  position: absolute;
+
   width: 334px;
   height: 334px;
   backface-visibility: hidden;
@@ -809,7 +814,6 @@ header .badges .badge {
 
 }
 .reserve-store .medal .front {
-  position: absolute;
   transform: rotateY(0deg);
 
 }
@@ -833,4 +837,55 @@ header .badges .badge {
   left: 0;
   right: 0;
   margin: auto;
+}
+
+/* FIND THE STORE */
+
+.find-store {
+  background-image: url(../images/find_store_bg.jpg);
+}
+
+.find-store .inner{
+  height: 400px;
+}
+
+.find-store .texture1 {
+  position: absolute;
+  top: 0;
+  left: 400px;
+}
+
+.find-store .texture2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.find-store .picture {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px rgb(0,0,0,.5); /*그림자*/
+}
+.find-store .picture1 {
+  top: -60px;
+  left: 0;
+}
+
+.find-store .picture2 {
+  top: 150px;
+  left: 250px;
+}
+
+.find-store .text-group{
+  position: absolute;
+  top: 120px;
+  left: 550px;
+}
+.find-store .text-group .title {
+  margin-bottom: 20px;
+}
+
+.find-store .text-group .description {
+  margin-bottom: 20px;
+
 }
