@@ -132,7 +132,7 @@ gsap.to(window, .7, {
 </div>
 ```
 
-[Swiper API](https://swiperjs.com/swiper-api)(옵션)을 확인하세요!
+[Swiper API](https://swiperjs.com/swiper-api)(옵션)
 
 ```js
 new Swiper(요소, 옵션);
