@@ -110,3 +110,83 @@ gsap.to(window, .7, {
   scrollTo: 0
 });
 ```
+## Swiper
+
+[Swiper](https://swiperjs.com/)는 하드웨어 가속 전환과 여러 기본 동작을 갖춘 슬라이드 라이브러리.
+
+[Getting Started With Swiper](https://swiperjs.com/get-started)
+
+
+```html
+<!-- in HEAD -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
+
+<!-- in BODY -->
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">1</div>
+    <div class="swiper-slide">2</div>
+    <div class="swiper-slide">3</div>
+  </div>
+</div>
+```
+
+[Swiper API](https://swiperjs.com/swiper-api)(옵션)
+
+```js
+new Swiper(요소, 옵션);
+```
+
+```js
+new Swiper('.swiper-container', {
+  direction: 'vertical', // 수직 슬라이드
+  autoplay: true, // 자동 재생 여부
+  loop: true // 반복 재생 여부
+});
+```
+
+## Youtube API
+
+[IFrame Player API](https://developers.google.com/youtube/iframe_api_reference?hl=ko)를 통해 YouTube 동영상을 제어 가능.
+
+유튜브 영상이 출력될 위치에 요소를 지정(생성).
+
+```html
+<!-- in HEAD -->
+<script defer src="./js/youtube.js"></script>
+
+<!-- in BODY -->
+<div id="player"></div>
+```
+
+`onYouTubePlayerAPIReady` 함수 이름은 Youtube IFrame Player API에서 사용하는 이름이기 때문에 다르게 지정하면 동작 X<br>
+그리고 함수는 전역(Global) 등록
+
+[플레이어 매개변수(playerVars)](https://developers.google.com/youtube/player_parameters.html?playerVersion=HTML5&hl=ko#Parameters) - 옵션
+
+```js
+// Youtube IFrame API를 비동기로 로드.
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+function onYouTubePlayerAPIReady() {
+  // <div id="player"></div>
+  new YT.Player('player', {
+    videoId: 'An6LvWQuj_8', // 재생할 유튜브 영상 ID
+    playerVars: {
+      autoplay: true, // 자동 재생 유무
+      loop: true, // 반복 재생 유무
+      playlist: 'An6LvWQuj_8' // 반복 재생할 유튜브 영상 ID 목록
+    },
+    events: {
+      // 영상이 준비되었을 때,
+      onReady: function (event) {
+        event.target.mute(); // 음소거
+      }
+    }
+  });
+}
+```
