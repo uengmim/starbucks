@@ -163,7 +163,7 @@ new Swiper('.swiper-container', {
 `onYouTubePlayerAPIReady` 함수 이름은 Youtube IFrame Player API에서 사용하는 이름이기 때문에 다르게 지정하면 동작 X<br>
 그리고 함수는 전역(Global) 등록
 
-[플레이어 매개변수(playerVars)](https://developers.google.com/youtube/player_parameters.html?playerVersion=HTML5&hl=ko#Parameters)에서 더 많은 옵션을 확인 가능.
+[플레이어 매개변수(playerVars)](https://developers.google.com/youtube/player_parameters.html?playerVersion=HTML5&hl=ko#Parameters) - 옵션
 
 ```js
 // Youtube IFrame API를 비동기로 로드.
