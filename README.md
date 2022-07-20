@@ -1,5 +1,7 @@
 # starbucks
 스타벅스 클론 코딩
+<a href="https://starbucks-uengmim.netlify.app/">Starbucks</a>
+
 ## 오픈 그래프(The Open Graph protocol)
 
 웹페이지가 소셜 미디어(페이스북 등)로 공유될 때 우선적으로 활용되는 정보를 지정.
