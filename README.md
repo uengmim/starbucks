@@ -1,5 +1,5 @@
 # starbucks
-스타벅스 클론 코딩
+**스타벅스 클론 코딩**
 <br>
 <a href="https://starbucks-uengmim.netlify.app/">Starbucks</a>
 
